@@ -16,12 +16,14 @@ const userInterface = readline.createInterface({
   output: process.stdout,
 });
 
+var message = [];
 userInterface.prompt();
 
 userInterface.on('line', async (input) => {
+  message = [...message, { role: 'user', content: input }];
   const res = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: input }],
+    messages: message,
   });
 
   console.log(res.data.choices[0].message.content);
