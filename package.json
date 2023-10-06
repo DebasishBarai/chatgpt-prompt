@@ -1,0 +1,16 @@
+{
+  "name": "chatgpt-prompt",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "debasishbarai",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "openai": "3.3"
+  }
+}
